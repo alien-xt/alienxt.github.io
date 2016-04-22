@@ -1,5 +1,5 @@
 ---
-layout: post
+type: post
 category: Storm
 title: Strom实时流式计算
 tagline: by Snail
