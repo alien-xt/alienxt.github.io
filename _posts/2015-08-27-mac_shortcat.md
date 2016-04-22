@@ -1,5 +1,6 @@
 ---
 type: post
+layout: post
 category: Mac
 title: Mac全键盘操作
 tagline: by Snail
