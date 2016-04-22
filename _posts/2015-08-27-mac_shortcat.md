@@ -1,4 +1,5 @@
 ---
+type: post
 category: Mac
 layout: post
 title: Mac全键盘操作
