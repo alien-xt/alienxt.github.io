@@ -49,7 +49,7 @@ widgets:
 - links
 #- weibo
 #- douban
-#- rss
+- rss
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 
