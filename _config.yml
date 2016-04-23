@@ -6,9 +6,9 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygments
 
 assets: http://alienxt.github.io/assets
-baseurl: http://alienxt.github.io 
+#baseurl: http://alienxt.github.io 
 #assets: http://localhost:4000/assets
-#baseurl: 
+baseurl: 
 
 # pagination
 paginate: 10
@@ -137,7 +137,7 @@ totop: true           ## if you want to scroll to top in every post set the valu
 #### Custom Search
 google_cse: 
   enable: true
-  cx: 015135161699065652540 #004255214185073801838:_icnlls8kds  ## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
+  cx: 015135161699065652540:jw_akqebqsi #004255214185073801838:_icnlls8kds  ## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.
 ## https://www.google.com/cse/ 
 ## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file
 ## set the 'front-matter' as
