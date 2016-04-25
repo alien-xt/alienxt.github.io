@@ -11,9 +11,6 @@ tags: [Java, Maven]
 
 <!--more-->
 
-#如何利用Github搭建Maven仓库
-
-
 ##Depoly到本地目录
 
 在项目中配置本地的部署地址，并且depoly到本地
