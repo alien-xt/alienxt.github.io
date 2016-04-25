@@ -1,7 +1,7 @@
 ---
 type: post
 layout: post
-category:	Maven
+category:	Java
 title: Intellij idea配置Codereview
 tagline: by Snail
 tags: [Java, Maven]

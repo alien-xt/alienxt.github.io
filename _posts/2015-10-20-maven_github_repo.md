@@ -1,7 +1,7 @@
 ---
 type: post
 layout: post
-category:	Maven
+category:	Java
 title: Github搭建Maven的远程仓库
 tagline: by Snail
 tags: [Java, Maven]
