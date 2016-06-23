@@ -20,6 +20,7 @@ Heron实时计算入门
 
 ###关于Storm的瓶颈
 
+
 ####Worker的局限性
 
 Storm的worker是一个复杂的设置，spout和bolt是用来执行我们的任务的task，多个task跑在executor上。而多个executor则组成一个worker，也就是一个jvm进程。一个supervisor节点上，可以跑多个worker进程。
@@ -45,6 +46,7 @@ Storm的worker是一个复杂的设置，spout和bolt是用来执行我们的任
 
 
 ####Nimbus的问题
+
 
 #####nimbus任务重
 
@@ -91,9 +93,12 @@ Topology是一个用来处理处理流数据的DAG图，里面的组件包括spo
 
 ![图1](/img/2016-06-14_heron_base/1.png)
 
+
 Spouts负责发送tuple在topology里，而bolts负责处理这些tuple。如上图，S1发送tuple到B1和B2进行处理，B1发送tuple到B3和B4进行处理，B2则发送tuple给B4。
 
+
 这只是一个简单的topology，我们还可以构建更为复杂的topology。
+
 
 ###生命周期
 
@@ -104,6 +109,7 @@ Spouts负责发送tuple在topology里，而bolts负责处理这些tuple。如上
 * restart	重启topology，比如我们更新结构，配置等
 * deactivate 停用topolgy，一旦停用后，还会运行在集群中，只是已经不开始处理数据流了
 * kill	集群中将不会运行改topology，你需要重新submit
+
 
 ###Spouts
 
@@ -156,7 +162,9 @@ Heron直接继承与Storm，同时有两个设计的目标：
 
 Topology Master (TM)管理一个Topology的整个生命周期，从它提交到最终被杀死。当一个topology被部署上集群后，会创建一个TM，以及多个Container。同时，TM创建了一个短暂的Zookeeper节点，来确保一个Topology中只有一个TM。同时TM还会创建一个拓扑的物理计划
 
+
 ![图2](/img/2016-06-14_heron_base/2.png)
+
 
 
 ####Container
@@ -168,12 +176,16 @@ Topology Master (TM)管理一个Topology的整个生命周期，从它提交到�
 
 Stream Manager（SM）管理组件之间的路由拓扑结构，负责本地的消息以及网络中的消息之间的传递，如下图：
 
+
 ![图3](/img/2016-06-14_heron_base/3.png)
+
 
 
 下面这张图表达出背压机制的设计：
 
+
 ![图4](/img/2016-06-14_heron_base/4.png)
+
 
 如上图，B3负责从S1接收消息，B3运行比其他缓慢。结果就是B3拒绝从C，D中获取消息，这可能导致整个拓扑的吞吐量崩溃。而一旦B3开始正常运转，集群中的SM会互相通知，拓扑路由也会回复正常
 
