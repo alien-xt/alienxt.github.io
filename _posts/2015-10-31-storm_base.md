@@ -2,7 +2,7 @@
 type: post
 layout: post
 category: Storm
-title: Strom实时流式计算
+title: Storm实时流式计算
 tagline: by Snail
 tags:
   - Storm
@@ -12,7 +12,7 @@ tags:
 
 <!--more-->
 
-##Strom介绍
+##Storm介绍
 
 ###实时流式计算背景
 
